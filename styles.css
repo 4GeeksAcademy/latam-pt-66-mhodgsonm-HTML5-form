@@ -1,0 +1,225 @@
+/* ========== RESETEO Y BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+#mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+}
+
+/* ========== CAJA BLANCA DEL FORMULARIO ========== */
+.mainbox {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ========== TÍTULO ========== */
+.title {
+  background-color: #e8e8e8;
+  padding: 15px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.title h1 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #333;
+}
+
+/* ========== ALERTA DE ERROR ========== */
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-error p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ========== GRUPOS DE FORMULARIO ========== */
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* ========== INPUTS, SELECT Y TEXTAREA ========== */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #66afe9;
+}
+
+textarea {
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== SECCIÓN DE TARJETA (3 columnas) ========== */
+.card-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Input de Amount con símbolo $ */
+.amount-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dollar-sign {
+  position: absolute;
+  left: 12px;
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+}
+
+.amount-input input {
+  padding-left: 25px;
+}
+
+/* ========== INFORMACIÓN PERSONAL (2 columnas) ========== */
+.personal-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ========== ICONOS DE MÉTODO DE PAGO ========== */
+.payment-icons {
+  display: flex;
+  gap: 8px;
+  background-color: #6c757d;
+  padding: 8px 10px;
+  border-radius: 4px;
+  align-items: center;
+  width: min-content;
+}
+
+.payment-icons i {
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 8px 10px;
+  width: min-content;
+  border-radius: 3px;
+  transition: transform 0.2s;
+}
+
+.payment-icons i:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ========== STATE Y POSTAL CODE (misma fila) ========== */
+.state-postal {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+/* ========== BOTONES ========== */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-cancel,
+.btn-send {
+  padding: 10px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+.btn-send {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-send:hover {
+  background-color: #0056b3;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .card-info {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-info {
+    grid-template-columns: 1fr;
+  }
+
+  .state-postal {
+    grid-template-columns: 1fr;
+  }
+}
