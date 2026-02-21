@@ -26,29 +26,6 @@
             <p>Some fields are missing</p>
           </div>
 
-          <!-- SECCIÓN DE MÉTODOS DE PAGO -->
-          <div class="form-group payment-methods">
-            <label>Payment Method</label>
-            <div class="radio-group">
-              <label>
-                <input type="radio" name="payment-method" value="credit-card" />
-                Credit Card
-              </label>
-              <label>
-                <input type="radio" name="payment-method" value="debit-card" />
-                Debit Card
-              </label>
-              <label>
-                <input type="radio" name="payment-method" value="paypal" />
-                PayPal
-              </label>
-              <label>
-                <input type="radio" name="payment-method" value="bank-transfer" />
-                Bank Transfer
-              </label>
-            </div>
-          </div>
-
           <!-- SECCIÓN 1: INFORMACIÓN DE TARJETA (Card, CVC, Amount) -->
           <div class="card-info">
             <div class="form-group">
@@ -90,10 +67,22 @@
               <div class="form-group">
                 <label>We accept:</label>
                 <div class="payment-icons">
-                  <i class="fab fa-cc-mastercard"></i>
-                  <i class="fab fa-cc-visa"></i>
-                  <i class="fab fa-cc-diners-club"></i>
-                  <i class="fab fa-cc-amex"></i>
+                  <label>
+                    <input type="radio" name="card-type" value="mastercard" />
+                    <i class="fab fa-cc-mastercard"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="card-type" value="visa" />
+                    <i class="fab fa-cc-visa"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="card-type" value="diners" />
+                    <i class="fab fa-cc-diners-club"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="card-type" value="amex" />
+                    <i class="fab fa-cc-amex"></i>
+                  </label>
                 </div>
               </div>
             </div>
